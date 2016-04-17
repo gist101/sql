@@ -3,7 +3,6 @@
 
 SELECT
 ------
-'''
 
     SELECT {Fields}
     FROM {Table}
@@ -11,7 +10,6 @@ SELECT
             ON {Conditions}
     WHERE
 
-'''
 
 INSERT INTO
 -----------
