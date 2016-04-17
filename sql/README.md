@@ -6,9 +6,11 @@ SELECT
 
     SELECT {Fields}
     FROM {Table}
-        JOIN|INNER JOIN|LEFT JOIN|RIGHT JOIN|FULL OUTER JOIN {Tables}
+        JOIN|INNER JOIN|LEFT JOIN|RIGHT JOIN|FULL OUTER JOIN {Table}
             ON {Conditions}
-    WHERE
+    WHERE {Conditions}
+    GROUP BY {Fields}
+    ORDER BY {Fields}
 
 
 INSERT INTO
