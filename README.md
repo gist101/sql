@@ -5,7 +5,7 @@ SQL | Gist 101
 ---------
 Useful receipts for tasks related to SQL.
 
-/sample
+/demo
 -------
 Sample databases & data for test.
 

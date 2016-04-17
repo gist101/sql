@@ -12,6 +12,24 @@ SELECT
     GROUP BY {Columns}
     ORDER BY {Columns}
 
+### SELECT DISTINCT {Columns} ...
+No duplicate values in selected columns.
+
+### SELECT TOP {Number|Percent} ...
+Equivalent to LIMIT clause in most databases.
+
+    SELECT {Columns}
+    ...
+    LIMIT {Number}
+
+### SELECT ... INTO ...
+
+    SELECT {Columns}
+    INTO {Table} [IN {Database}]
+    FROM {Table}
+    ...
+
+### SELECT ... UNION [ALL] SELECT ...
 
 INSERT INTO
 -----------
@@ -20,6 +38,14 @@ INSERT INTO
         ({Columns})
     VALUES
         ({Row})
+
+### INSERT INTO ... SELECT ...
+
+    INSERT INTO {Table}
+        ({Columns})
+    SELECT {Columns}
+    FROM {Table}
+    ...
 
 UPDATE
 ------
@@ -33,6 +59,22 @@ DELETE
 
     DELETE FROM {Table}
     WHERE {Conditions}
+
+CREATE VIEW
+-----------
+
+    CREATE VIEW {View} AS
+    SELECT {Columns}
+    FROM {Table}
+    ...
+
+### CREATE OR REPLACE VIEW
+Similar as CREATE VIEW.
+
+DROP VIEW
+---------
+
+    DROP VIEW {View}
 
 CREATE TABLE
 ------------
@@ -63,3 +105,12 @@ DROP TABLE
 
     DROP TABLE {Table}
 
+CREATE DATABASE
+---------------
+
+    CREATE DATABASE {Database}
+
+DROP DATABASE
+-------------
+
+    DROP DATABASE {Database}
