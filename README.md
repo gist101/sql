@@ -1,10 +1,14 @@
 SQL | Gist 101
 ==============
 
-/sql
-----
-Diagnosis of SQL.
-
 /cookbook
 ---------
 Useful receipts for tasks related to SQL.
+
+/sample
+-------
+Sample databases & data for test.
+
+/sql
+----
+Diagnosis of SQL language basics.
