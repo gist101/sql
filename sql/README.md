@@ -1,8 +1,14 @@
 /sql/sql | Gist 101
 ==============
+* [Record Commands](#record-commands)
+* [View Commands](#view-commands)
+* [Table Commands](#table-commands)
+* [Database Commands](#database-commands)
 
-SELECT
-------
+Record Commands
+---------------
+
+### SELECT
 
     SELECT {Columns}
     FROM {Table}
@@ -12,34 +18,33 @@ SELECT
     GROUP BY {Columns}
     ORDER BY {Columns}
 
-### SELECT DISTINCT {Columns} ...
+#### SELECT DISTINCT {Columns} ...
 No duplicate values in selected columns.
 
-### SELECT TOP {Number|Percent} ...
+#### SELECT TOP {Number|Percent} ...
 Equivalent to LIMIT clause in most databases.
 
     SELECT {Columns}
     ...
     LIMIT {Number}
 
-### SELECT ... INTO ...
+#### SELECT ... INTO ...
 
     SELECT {Columns}
     INTO {Table} [IN {Database}]
     FROM {Table}
     ...
 
-### SELECT ... UNION [ALL] SELECT ...
+#### SELECT ... UNION [ALL] SELECT ...
 
-INSERT INTO
------------
+### INSERT INTO
 
     INSERT INTO {Table}
         ({Columns})
     VALUES
         ({Row})
 
-### INSERT INTO ... SELECT ...
+#### INSERT INTO ... SELECT ...
 
     INSERT INTO {Table}
         ({Columns})
@@ -47,37 +52,38 @@ INSERT INTO
     FROM {Table}
     ...
 
-UPDATE
-------
+### UPDATE
 
     UPDATE {Table}
     SET {Assignments}
     WHERE {Conditions}
 
-DELETE
-------
+### DELETE
 
     DELETE FROM {Table}
     WHERE {Conditions}
 
-CREATE VIEW
------------
+View Commands
+-------------
+
+### CREATE VIEW
 
     CREATE VIEW {View} AS
     SELECT {Columns}
     FROM {Table}
     ...
 
-### CREATE OR REPLACE VIEW
+#### CREATE OR REPLACE VIEW
 Similar as CREATE VIEW.
 
-DROP VIEW
----------
+### DROP VIEW
 
     DROP VIEW {View}
 
-CREATE TABLE
-------------
+Table Commands
+--------------
+
+### CREATE TABLE
 
     CREATE TABLE {table}
     (
@@ -85,8 +91,7 @@ CREATE TABLE
         {Constraints}
     );
 
-ALTER TABLE
------------
+### ALTER TABLE
 
     ALTER TABLE {Table}
     ADD {Column} {Data type}({Size})
@@ -94,23 +99,22 @@ ALTER TABLE
     * MODIFY COLUMN {Column} {Data type}({Size})
     * ALTER COLUMN {Column} {Data type}({Size})
 
-TRUNCATE TABLE
---------------
+### TRUNCATE TABLE
 TRUNCATE TABLE removes all rows from a table, but the table structure and its columns, constraints, indexes, and so on remain.
 
     TRUNCATE TABLE {Table}
 
-DROP TABLE
-----------
+### DROP TABLE
 
     DROP TABLE {Table}
 
-CREATE DATABASE
----------------
+Database Commands
+-----------------
+
+### CREATE DATABASE
 
     CREATE DATABASE {Database}
 
-DROP DATABASE
--------------
+### DROP DATABASE
 
     DROP DATABASE {Database}
